@@ -8,6 +8,7 @@ type State = {
   setIsBusy: (isBusy: boolean) => void;
   setSelectedTab: (tabIndex: number) => void;
   setUploadFile: (file: File) => void;
+  delUploadFile: (tab: number) => void;
 };
 
 export const useStore = create<State>((set) => ({
@@ -22,4 +23,10 @@ export const useStore = create<State>((set) => ({
       state.uploadFiles.set(state.selectedTab, file);
       return { uploadFiles: new Map(state.uploadFiles) };
     }),
+  delUploadFile: (tab: number) => {
+    set((state) => {
+      state.uploadFiles.delete(tab);
+      return { uploadFiles: new Map(state.uploadFiles) };
+    });
+  },
 }));

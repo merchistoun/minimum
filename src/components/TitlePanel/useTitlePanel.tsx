@@ -1,17 +1,21 @@
+import { useFileUploadFn } from "../../functions";
 import { useStore } from "../../store/useStore";
 
 export interface UseTitlePanel {
   isUploadDisabled: boolean;
+  isBusy: boolean;
   onUploadClick: () => void;
 }
 
 export const useTitlePanel = (): UseTitlePanel => {
-  const { uploadFiles, setUploadFile } = useStore();
+  const { isBusy, uploadFiles } = useStore();
+  const { fileUploadFn } = useFileUploadFn();
+
   const isUploadDisabled = uploadFiles.size === 0;
 
   const onUploadClick = () => {
-    setUploadFile(new File([], "test.txt"));
+    fileUploadFn();
   };
 
-  return { isUploadDisabled, onUploadClick };
+  return { isBusy, isUploadDisabled, onUploadClick };
 };

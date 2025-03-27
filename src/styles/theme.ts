@@ -3,7 +3,7 @@ import { ThemeOptions } from "@mui/material";
 export const lightTheme = {
   fontFamily: "Inter, sans-serif",
   color1: "#064ebf",
-  color2: "#3b82f6",
+  color2: "#a8c7f4",
   success: "#52a500",
   error: "#ef4444",
   warn: "#facc15",
@@ -19,6 +19,7 @@ export const lightThemeOptions: ThemeOptions = {
     },
     primary: {
       main: lightTheme.color1,
+      light: lightTheme.color2,
       contrastText: lightTheme.background,
     },
     secondary: {

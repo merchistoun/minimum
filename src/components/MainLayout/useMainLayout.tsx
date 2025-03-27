@@ -5,12 +5,22 @@ import { useStore } from "../../store/useStore";
 export interface UseMainLayout {
   tabs: MainTab[];
   selectedTab: number;
+  selectedTabFile: File | undefined;
   onTabChanged: (tabIndex: number) => void;
+  onFileDropped: (files: File) => void;
+  onFileRemove: () => void;
 }
 
 export const useMainLayout = (): UseMainLayout => {
   const { translate } = useTranslate(NAMESPACE.tabs);
-  const { selectedTab, setSelectedTab, uploadFiles } = useStore();
+
+  const {
+    selectedTab,
+    uploadFiles,
+    setSelectedTab,
+    setUploadFile,
+    delUploadFile,
+  } = useStore();
 
   const tabs: MainTab[] = [TAB.fuel, TAB.electricity].map((name, value) => ({
     name: translate(name),
@@ -18,5 +28,23 @@ export const useMainLayout = (): UseMainLayout => {
     showIcon: !!uploadFiles.get(value),
   }));
 
-  return { tabs, selectedTab, onTabChanged: setSelectedTab };
+  const onFileDropped = (file: File) => {
+    if (selectedTab !== undefined) {
+      setUploadFile(file);
+    }
+  };
+
+  const onFileRemove = () => {
+    if (selectedTab !== undefined) {
+      delUploadFile(selectedTab);
+    }
+  };
+  return {
+    tabs,
+    selectedTab,
+    selectedTabFile: uploadFiles.get(selectedTab),
+    onTabChanged: setSelectedTab,
+    onFileDropped,
+    onFileRemove,
+  };
 };
