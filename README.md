@@ -9,7 +9,7 @@ This project was bootstrapped with Vite & TypeScript.
 1. Clone the respository:
 
 ```bash
-git clone https://github.com/timparsons/minimum.git
+git clone git@github.com:merchistoun/minimum.git
 ```
 
 2. Install the dependencies:
