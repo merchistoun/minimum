@@ -1,11 +1,25 @@
-import { NAMESPACE, useTranslate } from "../../localization";
+import {
+  createTheme,
+  StyledEngineProvider,
+  ThemeProvider,
+  useMediaQuery,
+} from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import { MainLayout } from "../";
+import { lightThemeOptions } from "../../styles/theme";
 
 export const App = (): React.ReactElement => {
-  const { translate } = useTranslate(NAMESPACE.default);
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const theme = createTheme(
+    prefersDarkMode ? lightThemeOptions : lightThemeOptions
+  );
 
   return (
-    <div>
-      <h1>{translate("title")}</h1>
-    </div>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <MainLayout />
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 };

@@ -3,9 +3,10 @@ import { GROUP, NAMESPACE } from "./model";
 // Default translations: US English
 
 export default {
-  [NAMESPACE.default]: {
+  [NAMESPACE.tabs]: {
     [GROUP.default]: {
-      title: "Minimum",
+      fuel: "Fuel usage",
+      electricity: "Electricity usage",
     },
   },
 };

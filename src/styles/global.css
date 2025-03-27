@@ -1,29 +1,18 @@
-/* base.css */
-
 /* Default (light mode) */
 :root {
   --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-primary: #0066cc;
-  --color-secondary: #f0f0f0;
-  --color-border: #cccccc;
 }
 
 /* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --color-bg: #121212;
-    --color-text: #f5f5f5;
-    --color-primary: #3399ff;
-    --color-secondary: #1e1e1e;
-    --color-border: #444444;
   }
 }
 
 /* Apply basic theming */
 body {
   background-color: var(--color-bg);
-  color: var(--color-text);
   font-family: inter, system-ui, sans-serif;
   margin: 0;
   padding: 0;

@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./components";
 import "./styles/global.css";
-import "./styles/normalize.css";
 
 // Initialize i18n
 import initializeTranslation from "./localization";
