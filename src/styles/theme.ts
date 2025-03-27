@@ -2,7 +2,7 @@ import { ThemeOptions } from "@mui/material";
 
 export const lightTheme = {
   fontFamily: "Inter, sans-serif",
-  color1: "#064eff",
+  color1: "#064ebf",
   color2: "#3b82f6",
   success: "#52a500",
   error: "#ef4444",
@@ -54,7 +54,7 @@ export const lightThemeOptions: ThemeOptions = {
 
     h1: {
       fontFamily: lightTheme.fontFamily,
-      fontSize: "1.5rem",
+      fontSize: "1.125rem",
       fontWeight: 600,
     },
 

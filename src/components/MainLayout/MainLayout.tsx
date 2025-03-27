@@ -1,6 +1,7 @@
 import { styled } from "@mui/material";
 import React from "react";
 import { TabBar, Text } from "../common";
+import { TitlePanel } from "../TitlePanel/TitlePanel";
 import { useMainLayout } from "./useMainLayout";
 
 export const MainLayout = (): React.ReactElement => {
@@ -8,8 +9,8 @@ export const MainLayout = (): React.ReactElement => {
 
   return (
     <Layout>
+      <TitlePanel />
       <div>
-        <Text variant="h1" text="Title Bar" />
         <Text variant="h2" text="Info Panel" />
       </div>
 
@@ -30,4 +31,5 @@ const Layout = styled("div")`
   margin: 0 auto;
   height: 100vh;
   background-color: ${({ theme }) => theme.palette.background.default};
+  gap: 1rem;
 `;

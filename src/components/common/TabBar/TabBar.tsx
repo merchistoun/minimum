@@ -18,7 +18,6 @@ export const TabBar = (props: Props): React.ReactElement => {
 
   return (
     <StyledTabs
-      aria-label="Main Tabs"
       value={selectedTab}
       onChange={(_, value) => onTabChanged(value)}
     >
