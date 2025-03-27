@@ -11,6 +11,18 @@ export const lightTheme = {
   background: "#f8fafc",
 };
 
+export const darkTheme = {
+  fontFamily: "Inter, sans-serif",
+  color1: "#9BDBFC",
+  color2: "#555",
+  success: "#52a500",
+  error: "#ef4444",
+  warn: "#facc15",
+  text: "#eee",
+  background: "#252524",
+  paper: "#353535",
+};
+
 export const lightThemeOptions: ThemeOptions = {
   palette: {
     mode: "light",
@@ -68,6 +80,60 @@ export const lightThemeOptions: ThemeOptions = {
   },
 };
 
-export const darkTheme = {};
+export const darkThemeOptions: ThemeOptions = {
+  palette: {
+    mode: "dark",
+    background: {
+      default: darkTheme.background,
+      paper: darkTheme.paper,
+    },
+    primary: {
+      main: darkTheme.color1,
+      light: darkTheme.color2,
+      contrastText: darkTheme.background,
+    },
+    secondary: {
+      main: darkTheme.color2,
+      contrastText: darkTheme.background,
+    },
+    success: {
+      main: darkTheme.success,
+    },
+    warning: {
+      main: darkTheme.warn,
+    },
+    error: {
+      main: darkTheme.error,
+    },
+  },
+  typography: {
+    fontFamily: darkTheme.fontFamily,
 
-export const darkThemeOptions: ThemeOptions = {};
+    body1: {
+      fontFamily: darkTheme.fontFamily,
+      fontSize: "0.875rem",
+      fontWeight: 400,
+      color: darkTheme.text,
+    },
+
+    body2: {
+      fontFamily: darkTheme.fontFamily,
+      fontSize: "0.75rem",
+      fontWeight: 400,
+      color: darkTheme.text,
+    },
+
+    h1: {
+      fontFamily: darkTheme.fontFamily,
+      fontSize: "1.125rem",
+      fontWeight: 600,
+    },
+
+    h2: {
+      fontFamily: darkTheme.fontFamily,
+      fontSize: "1.125rem",
+      fontWeight: 500,
+      color: darkTheme.text,
+    },
+  },
+};

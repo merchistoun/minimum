@@ -27,6 +27,7 @@ export default {
 
   [NAMESPACE.dropZone]: {
     [GROUP.default]: {
+      label: "Upload file",
       dragAndDrop: "or drag and drop",
       fileTypes:
         ".csv, .doc, .docx, .eml, .gif, .jpg, .jpeg, .pdf, .msg, .pdf, .png, .txt, .xls, .xlsx files",

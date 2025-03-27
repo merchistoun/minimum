@@ -1,18 +1,4 @@
-/* Default (light mode) */
-:root {
-  --color-bg: #ffffff;
-}
-
-/* Dark mode overrides */
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-bg: #121212;
-  }
-}
-
-/* Apply basic theming */
 body {
-  background-color: var(--color-bg);
   font-family: inter, system-ui, sans-serif;
   margin: 0;
   padding: 0;

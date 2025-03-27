@@ -38,7 +38,7 @@ const TitlePanelLayout = styled("div")`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #00000010;
+  background-color: #00000020;
   border-top: 0.25rem solid #00000030;
   border-radius: 0 0 0.5rem 0.5rem;
   padding: 0.5rem 0.5rem 0.75rem 0.5rem;

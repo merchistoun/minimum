@@ -89,6 +89,10 @@ export const DropZone = (props: Props): React.ReactElement => {
   };
   return (
     <div>
+      <Title>
+        <Text text={translate("label")} variant="h2" />
+      </Title>
+
       <DropZonePanel
         isActive={onDragOver}
         onDrop={handleDrop}
@@ -138,6 +142,14 @@ export const DropZone = (props: Props): React.ReactElement => {
     </div>
   );
 };
+
+const Title = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+`;
 
 const DropZonePanel = styled("div")<{ isActive: boolean }>`
   display: flex;

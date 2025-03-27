@@ -7,12 +7,13 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import { ToastContainer } from "react-toastify";
 import { MainLayout } from "../";
-import { lightThemeOptions } from "../../styles/theme";
+import { darkThemeOptions, lightThemeOptions } from "../../styles/theme";
 
 export const App = (): React.ReactElement => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
   const theme = createTheme(
-    prefersDarkMode ? lightThemeOptions : lightThemeOptions
+    prefersDarkMode ? darkThemeOptions : lightThemeOptions
   );
 
   return (
