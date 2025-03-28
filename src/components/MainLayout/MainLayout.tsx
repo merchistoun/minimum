@@ -2,6 +2,7 @@ import { styled } from "@mui/material";
 import React from "react";
 import { DropZone, TabBar } from "../common";
 import { InfoPanel } from "../InfoPanel/InfoPanel";
+import { SettingsPanel } from "../SettingsPanel/SettingsPanel";
 import { TitlePanel } from "../TitlePanel/TitlePanel";
 import { useMainLayout } from "./useMainLayout";
 
@@ -17,6 +18,7 @@ export const MainLayout = (): React.ReactElement => {
 
   return (
     <Layout>
+      <SettingsPanel />
       <TitlePanel />
       <InfoPanel />
 
@@ -43,5 +45,5 @@ const Layout = styled("div")`
   margin: 0 auto;
   height: 100vh;
   background-color: ${({ theme }) => theme.palette.background.default};
-  gap: 1rem;
+  gap: 2rem;
 `;

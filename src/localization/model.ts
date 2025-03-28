@@ -6,6 +6,7 @@ export enum NAMESPACE {
   dropZone = "dropZone",
   functions = "functions",
   fileUploadFunction = "fileUploadFunction",
+  settingsPanel = "settingsPanel",
 }
 
 export enum GROUP {

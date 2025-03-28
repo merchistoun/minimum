@@ -156,7 +156,7 @@ const DropZonePanel = styled("div")<{ isActive: boolean }>`
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin: 0.5rem;
+  margin: 1rem;
   padding: 1rem;
   border: 1px dashed ${({ theme }) => theme.palette.text.primary};
   background-color: ${(props) =>

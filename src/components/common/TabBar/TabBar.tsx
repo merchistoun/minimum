@@ -49,6 +49,7 @@ const StyledTab = styled(Tab)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem 1rem 0 0;
 `;
 
 const CheckIcon = styled(CheckCircleIcon)`

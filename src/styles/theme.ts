@@ -6,7 +6,7 @@ export const lightTheme = {
   color2: "#a8c7f4",
   success: "#52a500",
   error: "#ef4444",
-  warn: "#facc15",
+  warn: "#ea8c15",
   text: "#1e293b",
   background: "#f8fafc",
 };

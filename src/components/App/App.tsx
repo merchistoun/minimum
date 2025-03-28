@@ -1,27 +1,22 @@
-import {
-  createTheme,
-  StyledEngineProvider,
-  ThemeProvider,
-  useMediaQuery,
-} from "@mui/material";
+import { StyledEngineProvider, ThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ToastContainer } from "react-toastify";
 import { MainLayout } from "../";
-import { darkThemeOptions, lightThemeOptions } from "../../styles/theme";
+import { useApp } from "./useApp";
+import { useStore } from "../../store/useStore";
 
 export const App = (): React.ReactElement => {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-
-  const theme = createTheme(
-    prefersDarkMode ? darkThemeOptions : lightThemeOptions
-  );
+  const { theme } = useApp();
+  const { language } = useStore();
 
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <MainLayout />
-        <ToastContainer pauseOnFocusLoss={false} theme="colored" />
+        <div lang={language}>
+          <CssBaseline />
+          <MainLayout />
+          <ToastContainer pauseOnFocusLoss={false} theme="colored" />
+        </div>
       </ThemeProvider>
     </StyledEngineProvider>
   );

@@ -3,6 +3,13 @@ import { GROUP, NAMESPACE } from "./model";
 // Default translations: US English
 
 export default {
+  [NAMESPACE.settingsPanel]: {
+    [GROUP.default]: {
+      lightMode: "Light mode",
+      darkMode: "Dark mode",
+    },
+  },
+
   [NAMESPACE.titlePanel]: {
     [GROUP.default]: {
       title: "Energy Uploads",
@@ -14,7 +21,7 @@ export default {
     [GROUP.default]: {
       title: "Instructions",
       instructions:
-        "Select each tab below and drag a file into the drop zone. When you have finished, click on the submit button at the top of this page.",
+        "Select each tab below and drag a file into the drop zone. When you have finished, click on the upload button at the top of this page.",
     },
   },
 

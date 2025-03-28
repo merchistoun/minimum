@@ -18,6 +18,5 @@ const InfoPanelLayout = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 0.5rem;
-  padding: 0rem;
+  padding: 1rem;
 `;

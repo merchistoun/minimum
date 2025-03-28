@@ -41,7 +41,7 @@ const TitlePanelLayout = styled("div")`
   background-color: #00000020;
   border-top: 0.25rem solid #00000030;
   border-radius: 0 0 0.5rem 0.5rem;
-  padding: 0.5rem 0.5rem 0.75rem 0.5rem;
+  padding: 0.5rem 1rem 0.75rem 1rem;
 `;
 
 const Progress = styled("div")`
