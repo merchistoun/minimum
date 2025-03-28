@@ -19,7 +19,16 @@ export const useFileUploadFn = (): UseFileUploadFn => {
 
     try {
       const results = await Promise.all(
-        Array.from(uploadFiles).map(async ([tab, _file]) => {
+        Array.from(uploadFiles).map(async ([tab, file]) => {
+          // Read file data for logging
+          const fileData = await new Promise<string>((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = () => reject(reader.error);
+            reader.readAsText(file);
+          });
+          console.log(`>>> FILE UPLOAD: ${file.name} >>>`, fileData);
+
           // Simulate upload delay
           await new Promise((res) => setTimeout(res, 2000));
           delUploadFile(tab);
