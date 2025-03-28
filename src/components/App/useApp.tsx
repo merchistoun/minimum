@@ -1,8 +1,7 @@
 import { createTheme } from "@mui/material";
 import { useDarkModeFn } from "../../functions";
-import { LOCAL_STORAGE_KEY } from "../../model";
-import { darkThemeOptions, lightThemeOptions } from "../../styles/theme";
 import { useStore } from "../../store/useStore";
+import { darkThemeOptions, lightThemeOptions } from "../../styles/theme";
 
 export interface UseApp {
   theme: ReturnType<typeof createTheme>;
